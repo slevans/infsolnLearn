@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>FTP - how to</title>
+</head>
+<body>
+<pre>
+FTP stands for file transport protocol
+
+This is one method used to move files to or get files from another computer, 
+typically a server.
+
+We will be covering some UNIX basics later, but in our case the server is 
+running Linux.  Linux has a file system similar to Windows or Mac made of files 
+in directories.
+
+While it is possible to ftp from a command prompt, there are many applications 
+available to facilitate transferring files.
+
+My preference is FileZilla: https://filezilla-project.org/download.php
+
+Once you have downloaded and installed an FTP client, you create a configuration 
+for the ftp server you would like to connect to.
+
+In FileZilla you can do this in the File menu > Site Manager.
+
+Click 'New Site' and type a label for this server that will appear on the 
+shortcut menu.
+
+A user must have been created on the server, or the server must have a guest 
+user set up, in order for you to ftp files to and from the server. If you are
+an infsoln student, one will be created for you and the credentials emailed
+once you have reached this chapter in the learning.
+
+In FileZilla, now enter the Host information.
+
+For Infinite Solutions, the server name is infsoln.com.  Leave Port blank.
+
+By default SFTP (secure ftp) uses port 22, ftp uses port 21 but the server 
+administrator can change it.
+
+For protocol, select 'SFTP'.
+
+Next, enter your login credentials under Logon Type 'Normal'.
+
+Click 'OK', then 'Connect'.
+
+By default, in the left hand pane you will see your local filesystem, and on the 
+right the remote (server's) file system.
+
+Double click on a file to move it to or from the server, or you may drag and 
+drop files into the interface.
+
+If you are an infsoln student, for now please upload any file changes for your 
+section to your directory instead of sending them in email. Soon 
+you will get a folder in your user directory that gets served from a sandbox 
+website, so that you can move php files to a server for testing.
+
+Remember, you are responsible for maintaining and organizing your own directory.
+
+FileZilla will allow you to create your own folders on the server to organize 
+your files in if you like.
+
+Also note that the user directories on the infsoln server are not backed up in 
+any way - if you delete the contents of your folder, there is no undo!
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Chapter 8 - HTML Forms source</title>
+</head>
+<body>
+<pre>
+One way to transmit data from the web to the server is
+through an html form
+
+You 'submit' the data that is entered through a number of
+means, the most common is via 'submit button'
+
+There are various different types of data entry controls
+available...
+
+Most of them are described with the '&lt;input />' tag, such as &lt;input type=text>
+
+To get a text box like you would put your name or city into
+
+Other types are checkbox and radio
+
+A submit button is &lt;input type=submit>
+
+To declare a form on a page, you use &lt;form> &lt;/form> tags
+
+And all the input types etc go in between them
+
+There are two ways to send the data to the server... POST and GET
+
+GET is the default method.
+With GET, the variables are sent via name/value pairs which are visible in the url
+http://example.com/form.php?name=suzy&job=homemaker
+
+POST is sent via an HTTP post transaction, behind the scenes.
+
+The form tag has attributes that tell the page: 1. whether
+to use post or get, 2. what the name of the form is, if any (generally for
+use within javascript), and 3. what page to load when the form is submitted.
+
+That looks like: &lt;form method=POST name=blah
+action=blah.php> &lt;/form>
+
+It is a good idea to use quotes around attribute values....
+&lt;form method="POST" name="blah" action="blah.php">
+
+So, when the data is sent to the server, the variable name
+is the name of the input field:
+&lt;input type="text" name="favColor" />
+
+The variable name will be 'favColor' and the value will be
+whatever the user typed in. In php that looks like $_GET['favColor'] = 'green';
+or $_POST['favColor'] = 'green'; (or $_REQUEST['favColor'] = 'green'; - which
+includes both POST and GET vars).
+
+Those are 'superglobal variables' that are available to
+your php script when a form is submitted or whatever.
+
+If you go to a url that has the variables listed behind it,
+it is the same as submitting a form to that page.
+
+other input types are also textarea, for big blocks of
+text, that looks like...
+&lt;textarea name="myText">Here is the default that
+will show inside the text box&lt;/textarea>
+
+And drop downs are done with select tags...
+&lt;select name="fruit">&lt;option value="apple">Apple&lt;/option>
+&lt;option value="orange">Orange&lt;/option>&lt;/select>
+
+And buttons, which are generally used in conjunction with
+javascript to process input before submitting it to the server:
+&lt;input type="button" name="myButton" value="Click to do
+something" onClick="javascript:doSomething();" />
+
+You can also pass default values into the controls
+&lt;input type=text name=myName value="Suzy" />
+The box will show with 'Suzy' filled in already
+
+With checkboxes, the user can click any number of them to
+select them
+
+With radio buttons, the user can only select one of the
+group at a time
+Controls can be styled with css like any other html tag
+
+On checkboxes and radio buttons to set a default you have
+to use the keyword 'selected'... it is different for both of them.
+
+There is also a password field that replaces
+whatever you type with ***** (but still sends to the server in plaintext).
+
+For radio button, it is 'checked'... &lt;input type="radio"
+name="numbers" value="1" checked /> One &lt;input type="radio" name="numbers"
+value="2" />Two
+And can only check one in a set of radio buttons
+Checkboxes same thing but you can check as many as you want
+
+Selected denotes the default option in a drop down
+&lt;select name=blah>&lt;option value="a" selected>A&lt;/option>
+&lt;option value="b">B&lt;/option>&lt;/select>
+</pre>
+</body>
+</html>

@@ -1,0 +1,36 @@
+.arrow {
+    background-image: url(downarrow.jpg);
+    background-position:center;
+    height: 222px;
+    width: 227px;
+}
+
+
+dt {
+    color: green;
+    font-size:20px;
+    font-family:"sans-serif";
+    padding-bottom:15px;
+    padding-top:15px;
+}
+
+h1{
+    color: green;
+}
+
+body{
+    font-family: arial, helvetica, sans-serif;
+}
+
+div{
+    
+}
+
+.il{
+	display: inline-block;
+}
+
+.redX{
+	font-size:20px;
+	color: red;
+}

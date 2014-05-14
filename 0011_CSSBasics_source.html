@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>CSS Basics Source</title>
+</head>
+<body>
+<pre>
+Best practice is to use Cascading Style Sheets (CSS) to control both the layout 
+and the look and feel of a page
+
+They come in 3 flavors:
+
+&middot; remote file &lt;- best practice;
+
+&middot; "in-file", where they are defined, usually in the &lt;head> section;
+
+&middot; and "inline" where they are defined inside an html tag
+example: &lt;p style="color: blue;">blue text&lt;/p>
+
+To start while you are learning we will put them in-file.
+
+You do this with a &lt;style> &lt;/style> tag in the head
+section of the html document.
+
+You only need one style tag, but you can have more - the style definitions in 
+each will be appended to the list as if they are all within the same style tag.
+
+Inside of style definitions are properties.  Properties are the aspects of
+an html element that you wish to control, such as font size or color, etc.
+
+Each property is listed with a semi-colon followed by the desired value. If
+there is more than one property defined in a style definition they should be
+separated by a semi-colon, as shown in the example below.
+
+For example:
+
+&lt;head>
+&lt;style>
+    #foo {
+        color: red;
+        font-size: 10px;
+    }
+&lt;/style>
+
+&lt;style>
+    #foo {
+        color: blue;
+    }
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;p id=foo>This text will be font size 10 and color blue.&lt;/p>
+&lt;/body>
+
+
+Styles are implemented using various 'CSS Selectors'.  The selectors are
+applied from most general case to most specific case, regardless of what
+order the style definitions are listed in the style sheet:
+
+&middot; 'wildcard' (*) refers to all html elements. This style does not need
+to be explicity called, just defined.
+
+&middot; 'element' (such as h1) refers to all html tags of that type. Again,
+this style does not need to be explicity called.
+
+&middot; 'class' (such as .boldItem) refers to a bunch of things
+by the same class name.  This is defined with a period before the class
+name in the style sheet, and does need to be referenced in the element tag.
+
+&middot; 'id' (such as #firstName) refers to one and only one
+thing on a page.  This is defined in the style sheet with a hashtag
+symbol before the id name, and does need to be referenced in the element tag.
+
+
+When applying styles, the last property value read will be used.  In the case 
+that several selectors of the same type are used, each applicable property 
+will override what was previously defined in the order that they are called.
+
+
+Examples:
+
+&lt;head>
+&lt;style>
+    * {
+        color: purple;
+    }
+    #myid {
+        color: blue;
+    }
+    .myClass {
+        color: red;
+    }
+    .myOtherClass {
+        color: green;
+    }
+    h1 {
+        color: orange;
+    }
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;h1>This will be orange&lt;/h1>
+&lt;div>This will be purple&lt;/div>
+&lt;p id="myid">This will be blue&lt;/p>
+&lt;p class="myClass">This will be red&lt;/p>
+&lt;p class="myClass" id="myid">This will be blue&lt;/p>
+&lt;p class="myClass, myOtherClass">This will be green&lt;/p>
+&lt;/body>
+
+Each html tag has different styles that will work for it, and each property
+has specific values that it will accept.
+
+For the details, I recommend w3schools css reference:
+http://www.w3schools.com/cssref/default.asp
+
+
+</pre>
+</body>
+</html>

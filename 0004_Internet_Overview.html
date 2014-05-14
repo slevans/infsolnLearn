@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="josephstyle.css" />
+</head>
+
+
+<body>
+<img src="infinite_logo.jpg" width="556.8" height="101.6">
+<h1>Internet Overview</h1>
+<p>Technology components and how they fit together.</p> 
+ 
+<h2>START HERE:</h2> 
+
+<div class=arrow> </div>
+
+<div>
+<h2>Your computer</h2> 
+<p>This is "the client" - sends request for web 
+page: http://www.infsoln.com </p> 
+</div>
+
+<div class=arrow></div>
+
+<div>
+<p>
+Your ISP passes your request through its 
+gateway to the Internet. If the route to the 
+URL is not known then must first look it up 
+using DNS. 
+</p> 
+</div>
+
+<div class=arrow></div>
+
+
+<div>
+<p>
+ISP's DNS asks: 
+What is the address for: 
+http://www.infsoln.com ? 
+ 
+Domain Name Registry sends back an 
+IP Address for the requested host to 
+the ISP gateway. 
+ISP gateway routes your http request 
+to the server at the given IP Address. 
+</p> 
+</div>
+
+<div class=arrow></div>
+
+
+<div>
+<h2>infsoln.com server</h2>
+<p>The gateway at the hosting facility for 
+infsoln.com receives the request for 
+the web page and sends it on to the 
+infsoln.com server. 
+</p> 
+</div>
+
+<div class=arrow></div>
+
+
+<div>
+<h2>www.infsoln.com web server</h2>
+<p>No file was specified in the request, so the web 
+server grabs the first available default, in our 
+example: index.php 
+The .php file extension tells it to hand code off to 
+the php parser
+</p> 
+</div>
+
+<div class=arrow></div>
+
+
+<div>
+<h2>infsoln.com php</h2>
+<p>php begins following instructions in the index.php file. 
+This file needs to get some data from the database. 
+Using the SQL query found in the code, php sends a 
+request to the database. 
+</p> 
+</div>
+
+<div class=arrow></div>
+
+
+<div>
+<p>
+infsoln.com database server 
+processes the query and ships back the result 
+</p> 
+</div> 
+
+<div class=arrow></div>
+
+
+<div>
+<h2>www.infsoln.com web server</h2>
+<p>php completes parsing the code and turns it into html. 
+The web server then sends the generated html code 
+back to the infsoln.com gateway. 
+</p> 
+</div>
+
+<div class=arrow></div>
+
+
+<div>
+<p>
+The infsoln.com gateway sends the html back 
+to your ISP's gateway. 
+Your ISP returns the result to your computer.
+</p> 
+</div>
+
+<div class=arrow></div>
+
+
+<div>
+<h2>Your computer</h2>
+<p>Your browser receives the html code, parses it, 
+and displays the resulting web page. Done! 
+</p> 
+</div>
+
+</body>
+
+</html>

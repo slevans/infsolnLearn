@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="josephstyle.css" />
+</head>
+
+
+<body>
+<img src="infinite_logo.jpg" width="556.8" height="101.6">
+<h1>HTML Basics</h1>
+
+<p>Html is the "language of the web".  Not only is it used to contain your
+ content and control how your content is displayed, but also determines how
+ Search Engines perceive your page, and what scripts can run.  With a little
+ help from javascript, it accesses information contained in users' browsers
+ and controls how those browsers will behave.  Your html code is even used
+ by third parties to determine if they want to automatically link back to 
+you or provide a synopsis of your page.  </p>
+
+<p>Having a solid understanding of html and its capabilities is a required 
+first step towards proficiency in Web development.  Any code you produce for
+ the Web will be written for the ultimate purpose of generating html.</p>
+
+<h1>Starting Points</h1>
+<ul>
+<li>HTML stands for Hyper-Text Markup Language.  </li>
+<li>This language is interpreted by web browsers.</li>
+<li>HTML file names end with .html (or .htm - for Microsoft deployments).</li>
+<li>HTML files are made up of tags and content.</li>
+<li>All white space in the content of an html page will display as a single space, unless controlled using html tags.</li>
+<li>You can view the html source code of any web page by pressing Ctrl-U</li>
+</ul>
+
+<h1>Tags</h1>
+<p>Tags represent various instructions for your browser.  They can divide the page into sections
+ and control how the content is laid out on the page.  Also, tags can be given an id and other
+ attributes or parameters that allow the content to be controlled via style sheets and javascript.
+  The content is made up of the plain text that should be displayed on the page.</p>
+<p>Other than the document type definition (see below) and meta tags, tags have two
+ formats.  Most tags are made up of a start tag, and an end tag (or opening/closing tag).
+  The start tag goes before the affected content, and the end tag goes after.  For
+ example, the start tag below is "&ltp>" and the end tag is "&lt/p>", which make up a 
+"paragraph" tag:&lt/p>
+<p>&ltp>This is a paragraph.&lt/p></p>
+<p>Some tags however, are self-closing.  Instead of a pair of start and end tags, these
+ are made up of a single tag that is formatted like the "line break" tag: </p>
+<p>&ltbr /></p>
+<p>All self-closing tags in html 5 start with a less than sign followed by the tag name,
+ and end with "space, forward slash, greater than".</p>
+<p>Some tags require various attributes to be set in order to function.  For example one very important tag, the "anchor tag", is used to create links to other web pages or to named sections on a page.  In order for the anchor tag to know where to send the user when the link is clicked it requires an "href" attribute:</p>
+<p>&lta href="http://www.infsoln.com">infsoln.com home page&lt/a></p>
+<p>The text, "infsoln.com home page" will by default show in blue with an underline.  When the user clicks on this underlined text, the browser will load the page found at "http://www.infsoln.com".</p>
+<p>Most tags also accept optional attributes.  These can be used to modify the behavior of the tags and the content contained therein.  The value of an attribute should always be contained in quotes, as seen in the anchor tag example above.</p>
+<p>For a complete list of tags, bookmark: http://www.w3schools.com/tags/default.asp
+You can click on a tag name to get the list of available attributes for that tag.</p>
+
+<h1>Required Tags</h1>
+<p>All HTML files (aka web pages) should have the following tags:</p>
+<dl>
+<dt>&lt;!DOCTYPE html></dt>
+<dd>The document type declaration.
+				The format to the left indicates the document type is html 5.
+				Tells your browser which html version to use when interpreting the tags on the page.
+				Required to be the very first line in your file.
+</dd>
+<dt>&ltbody> &lt/body></dt>
+<dd>The "body tag" contains the portion of the code that DOES display on the page.
+				A web page may only have one body tag section.
+				Tags in this section control content display.
+				Unlike the "head tag", the "body tag" can accept some attributes.
+</dd>
+<dt>&lthead> &lt/head></dt>
+<dd>The "head tag" contains a portion of the code that does not display on the page.
+				A web page may only have one head tag section.
+				Tags in this section define meta data, tell the page what supporting files to use if any,
+ 				and set some page attributes.
+</dd>
+<dt>&lthtml> &lt/html></dt>
+<dd>The "html tag" marks the beginning and the end of the html on the page.
+				It can appear only once on the page, and all of your html code goes between these tags.
+</dd>
+<dt>&ltmeta></dt>
+<dd>The "meta tag" accepts attributes that define what meta data is being modified.
+				While meta tags are not literally required for html to function properly, not including
+				a unique "meta description" on each page will cause search engines to provide no 
+				description on results pages, or even a wrong one inferred by the content on the page. 
+				<p>Example of a good meta description: </p>
+				<p>&ltmeta name="description" content="HTML Basics - an overview of the html language
+				including page layout, basic concepts, required tags, and useful tags."></p>
+</dd>
+<dt>&lttitle> &lt/title></dt>
+<dd>The "title tag" belongs in the head section.
+				The page title appears at the top of browser windows and in browser tabs.
+</dd>
+
+
+</dl>
+
+
+<h1>Sample Web Page</h1>
+<p>Below is an example of these tags put together, to comprise the minimum that is required for a properly formatted html page. </p>
+<p>To create your first web page, paste everything between the lines below into notepad and save the file as "first.html".
+  You may use the "File: Open" menu in your browser to find and open this file, or drag and drop the file icon into your
+ web browser.  Depending on how your desktop is configured, double clicking on the first.html file icon may also open it
+ in your browser for you.</p>
+<p>--------------------------------------------------------------------------------------------------</p>
+<p>&lt!DOCTYPE html><p>
+<p>&lthtml><p>
+<p>&lthead><p>
+<p>	&lttitle>HTML Basics - infsoln.com technical training&lt/title><p>
+<p>	&ltmeta name="description" content="HTML Basics - an overview of the html language<p>
+<p>	including page layout, basic concepts, required tags, and useful tags."><p>
+<p>&lt/head><p>
+<p>&ltbody><p>
+<p>Hello world! &ltbr /><p>
+<p>&ltp>These documents will soon be available at the &lta href="http://www.infsoln.com">infsoln.com website&lt/a>!&lt/p><p>
+<p>&lt/body><p>
+<p>&lt/html><p>
+------------------------------------------------------------------------------------------------------------------------------
+
+
+<h1>Useful Tags</h1>
+<dl>
+<dt>&lt!-- --></dt>
+<dd>"Comment tag" or "Remark tag". Used to prevent html (or other) code from displaying.
+	Remarked code will still be visible in the page's html source
+	<p>Example:  &ltp>This will display in the browser, &lt!-- this won't --> this will!&lt/p><p>
+</dd>
+<dt>&lta> &lt/a></dt>
+<dd>"Anchor tag". Used to create hyperlinks in your content.
+				<p>&lta href="http://www.infsoln.com">infsoln.com website&lt/a></p>
+</dd>
+<dt>&ltdiv> &lt/div></dt>
+<dd>"Div tag". Used to create a section within a web page.
+				These are commonly assigned attributes and used to apply styles and/or javascript.
+				<p>&ltdiv onmouseover="javascript:doSomething();">Here is a bunch of text that will do 
+				something when you mouse over it.&lt/div></p>
+</dd>
+<dt>&ltimg /></dt>
+<dd>"Image tag".  This tag is used to place images in your content. 
+<p>Example:
+				&ltimg src="http://infsoln.com/img/infinite_logo.jpg" /></p>
+</dd>
+
+<dt>&ltlink /></dt>
+<dd>"Link tag". Used to reference resources that are not in this file.
+				Used only in the "head tag" section.
+				<p>&ltlink rel="stylesheet" type="text/css" href="http://infsoln.com/infinite.css" /></p>
+</dd>
+<dt>&ltscript>&lt/script></dt>
+<dd>"Script tag".  Inserts client-side language code such as javascript into html.
+<p>There can be many of these tags on a page, and can be found in both the</p>
+<p>head or the body sections of the page.</p>
+<p>&ltscript type="text/javascript">alert("this is an alert!");&lt/script></p>
+</dd>
+<dt>&ltspan> &lt/span></dt>
+<dd>"Span tag".  Similar to a div, but by default contains no styling so is often used inline.
+				<p>&ltp>This is normal, &ltspan style="color: red;">this is important&lt/span> and this isn't.&lt/p></p>
+</dd>
+<dt>&ltstyle>&lt/style></dt>
+<dd>"Style tag". Used for including style sheet (css) definitions directly in a web page.
+				There can be many of these tags on a page, and should be placed in the head section.
+				<p>&ltstyle>div { width: 300px; }&lt/style></p>
+</dd>
+<dt>&lttable>
+<p> &lttr> &ltth> &lt/th> &lt/tr> </p>
+<p> &lttr> &lttd> &lt/td> &lt/tr> </p>
+<p> &lt/table> </p>
+</dt>
+<dd>Good for including actual tables of data, but not for formatting your page layout.
+	<p>&lttable>&lttr>&ltth>Col A&lt/th>&ltth>Col B&lt/th>&lt/tr>&lttr>&lttd>1&lt/td>&lttd>2&lt/td>&lt/tr>&lt/table></p>
+	<p>The above code will produce this in a browser:</p>
+	<table><tr><th>Col A</th><th>Col B</th></tr><tr><td>1</td><td>2</td></tr></table>
+
+</dd>
+<dt>&ltul>
+<p>&ltli> &lt/li></p>
+<p>&lt/ul></dt></p>
+<dd>"Unordered list" aka bullet list.  
+<p>"Ordered list" is &ltol> &ltli> &lt/li> &lt/ol></p>
+<p>Lists the "List items" (&ltli> &lt/li>) preceded by bullets.</p>
+<p>&ltul>&ltli>a&lt/li>&ltli>b&lt/li>&ltli>c&lt/li>&lt/ul></p>
+<ul><li>a</li><li>b</li><li>c</li></ul>
+
+</dd>
+
+
+
+
+</dl>

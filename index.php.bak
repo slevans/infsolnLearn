@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Infinite Solutions and Technology, LLC - Johnstown, CO</title>
+<link rel="stylesheet" type="text/css" href="http://infsoln.com/infinite.css" />
+</head>
+<body>
+
+<div class="header">
+<img src="http://infsoln.com/img/infinite_logo.jpg" width="500" />
+</div>
+
+<div class="back">
+<div class="textbox">
+
+<h2>Learning Topics</h2>
+<table class=center><tr><td>
+<ul>
+<li><a href="internet_literacy.php"></a> </li>
+</td><td>
+</td></tr></table>
+</div>
+</div>
+
+<div class="belowfold"></div>
+
+<div class="foot">
+&copy; <?php echo date('Y'); ?>
+ Infinite Solutions and Technology, LLC - All rights reserved.
+</div>
+
+
+</body>
+</html>
+
